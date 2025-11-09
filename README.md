@@ -1,87 +1,24 @@
-# JBAFF - Jailbreak Archive & Fix Framework
+# JB-AI (Team Synvo) — Educational Research Demo
 
-A dark-themed documentation website for AI jailbreak techniques and defense strategies.
+**Project:** JB-AI  
+**Owner:** Team Synvo (Founder: Alex)  
+**Demo:** https://team-synvo.github.io/JB-ai/
 
-## 🚀 GitHub Pages Deployment
+## Summary
+This repository hosts an educational research demonstration exploring how different regions may interact with AI model behavior. The project is intended for academic and technical study only — to help researchers and developers better understand model responses and regional variance in deployments.
 
-### Quick Setup
+## Important: Responsible Use Notice
+- This project **is not** intended to be used to bypass safety policies, to enable illegal activity, or to create unmoderated/unsafe outputs.  
+- Do **not** use these materials to target or harm people or to circumvent platform protections.  
+- By using this repository you agree to follow applicable laws and platform terms of service in your jurisdiction.
 
-1. **Upload to GitHub:**
-   ```bash
-   # Create a new repository on GitHub
-   # Then run these commands in your terminal:
-   
-   git init
-   git add .
-   git commit -m "Initial commit: JBAFF website"
-   git branch -M main
-   git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
-   git push -u origin main
-   ```
+## What this repo contains
+- Documentation and notes on observed regional response differences (research logs)
+- Example code for offline analysis and simulation (safe, non-production)
+- UI demo for showcasing findings (static pages)
 
-2. **Enable GitHub Pages:**
-   - Go to your repository on GitHub
-   - Click **Settings** → **Pages**
-   - Under "Source", select **Deploy from a branch**
-   - Select branch: **main**
-   - Select folder: **/ (root)**
-   - Click **Save**
+## Contributing
+Contributions that improve research quality, reproducibility, transparency, and safety are welcome. Please open PRs only if they follow the Project Code of Conduct and ethical guidelines in `CONDUCT.md`.
 
-3. **Your site will be live at:**
-   ```
-   https://YOUR_USERNAME.github.io/YOUR_REPO_NAME/
-   ```
-
-## 📁 File Structure
-
-```
-.
-├── index.html       # Main HTML file
-├── styles.css       # All styling
-├── script.js        # Interactive features
-└── README.md
-```
-
-## ✨ Features
-
-- **Dark Theme**: Professional dark UI optimized for readability
-- **Live Search**: Filter jailbreaks by name (e.g., "GROK v9")
-- **Smooth Animations**: Fade-ins, slide-ups, and hover effects
-- **Code Blocks**: One-click copy functionality
-- **Expandable Instructions**: Step-by-step guides for each script
-- **Responsive Design**: Works on desktop, tablet, and mobile
-- **Pure Static**: No build process, no dependencies
-
-## 🎨 Customization
-
-### Change Colors
-Edit the CSS variables in `styles.css`:
-```css
-:root {
-    --bg-primary: #0a0a0a;
-    --primary: #a855f7;
-    /* ... other colors ... */
-}
-```
-
-### Add More Scripts
-Add new script cards in `index.html` following the existing pattern.
-
-## 📝 Educational Purpose
-
-This documentation is for educational and research purposes only. It helps AI developers understand vulnerabilities and implement better security measures.
-
-## 🛠️ Local Testing
-
-Simply open `index.html` in your browser, or use a local server:
-
-```bash
-# Python 3
-python -m http.server 8000
-
-# Then visit: http://localhost:8000
-```
-
----
-
-**JBAFF** - Educational Resource • 2025
+## Contact / Questions
+If you want to collaborate on ethical research, DM @alzz.tech or open an issue.
