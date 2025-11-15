@@ -1,3 +1,55 @@
+
+// Visitor Tracking - Server-side
+async function initVisitorTracking() {
+    try {
+        // Check if this user has visited before
+        const hasVisited = localStorage.getItem('hasVisited');
+        
+        if (!hasVisited) {
+            // New visitor - increment counter on server
+            await fetch('/api/visit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+            
+            // Mark this user as having visited
+            localStorage.setItem('hasVisited', 'true');
+        }
+        
+        // Always fetch and display current total
+        updateVisitorDisplay();
+        
+        // Update display every 30 seconds
+        setInterval(updateVisitorDisplay, 30000);
+    } catch (error) {
+        console.error('Error initializing visitor tracking:', error);
+        document.getElementById('totalVisits').textContent = 'Error';
+    }
+}
+
+async function updateVisitorDisplay() {
+    try {
+        const response = await fetch('/api/visits');
+        const data = await response.json();
+        
+        const totalEl = document.getElementById('totalVisits');
+        if (totalEl) {
+            totalEl.textContent = data.total.toLocaleString();
+        }
+    } catch (error) {
+        console.error('Error updating visitor display:', error);
+        const totalEl = document.getElementById('totalVisits');
+        if (totalEl) {
+            totalEl.textContent = 'Error';
+        }
+    }
+}
+
+// Initialize visitor tracking on page load
+initVisitorTracking();
+
 // Search Functionality
 const searchInput = document.getElementById('searchInput');
 const scriptCards = document.querySelectorAll('.script-card');
